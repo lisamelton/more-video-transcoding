@@ -63,7 +63,7 @@ Audio and subtitle track behavior is also the same as with `two-pass-transcode.r
 
 ### `av1-transcode.rb`
 
-This Is The Future. Unfortunately, the AV1 video format is currently the Star Trek Future. Other than desktop PCs, most devices can't play it yet. This script uses the `svt_av1_10bit` software-based encoder with a constant quality ratecontrol system. Although the encoder is already quite good, it's still a work in progress. However, the encoder is faster than `x265_10bit` and usually produces smaller output. So it's certainly worth a try. Especially on 4K HDR content.
+This Is The Future. Unfortunately, the AV1 video format is currently the Star Trek Future. Other than desktop PCs, most devices can't play it yet. This script uses the `svt_av1_10bit` software-based encoder with a constant quality ratecontrol system. Although the encoder is already quite good, it's still a work in progress. And while the encoder is slower than `x265_10bit` on ARM platforms, it's faster on Intel and usually produces smaller output. So it's certainly worth a try. Especially on 4K HDR content.
 
 The `svt_av1_10bit` encoder can produce output compatible with the HDR10 and HDR10+ standards, but not Dolby Vision.
 
