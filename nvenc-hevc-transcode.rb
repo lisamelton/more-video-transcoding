@@ -18,7 +18,7 @@ module Transcoding
   class Command
     def about
       <<-HERE
-nvenc-hevc-transcode.rb 0.0.02023032301
+nvenc-hevc-transcode.rb 0.0.02023032901
 Copyright (c) 2023 Don Melton
       HERE
     end
@@ -241,7 +241,7 @@ Requires `HandBrakeCLI` and `ffprobe`.
           handbrake_command << value unless value.nil?
         end
 
-        system(*handbrake_command)
+        system(*handbrake_command, exception: true)
         return
       end
 
@@ -289,8 +289,7 @@ Requires `HandBrakeCLI` and `ffprobe`.
       fail "output file already exists: #{output}" if File.exist? output
 
       Kernel.warn 'Transcoding...'
-      fail "transcoding failed: #{output}" if system(*handbrake_command).nil?
-
+      system(*handbrake_command, exception: true)
       Kernel.warn "\nElapsed time: #{seconds_to_time(Time.now.tv_sec - seconds)}\n\n"
     end
 
