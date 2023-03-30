@@ -45,6 +45,8 @@ Video is also automatically cropped and forced subtitles are automatically burne
 
 But there are many customization options including direct access to most of the `HandBrakeCLI` API.
 
+> **WARNING**: *Shortly after HandBrake 1.6.1 was released, the `--two-pass` option in `HandBrakeCLI` was renamed `--multi-pass`.* (Insert "Leeloo Dallas Multipass" GIF here.) *If you use a nightly development build of `HandBrakeCLI` then you'll likely need to replace the text "--two-pass" in `two-pass-transcode.rb` with "--multi-pass" to avoid a runtime failure.*
+
 ### `hevc-transcode.rb`
 
 Designed for 4K HDR content, this script uses the `x265_10bit` software-based encoder with a constant quality ratecontrol system. But it's reeeeeally slow. I mean, really slow. However, it does produce high-quality output. You just have to decide whether it's worth it.
