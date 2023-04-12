@@ -18,7 +18,7 @@ module Transcoding
   class Command
     def about
       <<-HERE
-two-pass-transcode.rb 0.0.02023032901
+two-pass-transcode.rb 0.0.02023041201
 Copyright (c) 2023 Don Melton
       HERE
     end
@@ -480,7 +480,7 @@ Requires `HandBrakeCLI` and `ffprobe`.
           channels = audio[:stream]['channels'].to_i
           codec_name = audio[:stream]['codec_name']
 
-          if  codec_name == 'aac' and channels <= 6 or
+          if  (codec_name == 'aac' and channels <= 6) or
               (@ac3_surround and codec_name == 'ac3' and channels > 2)
             encoder = 'copy'
             bitrate = ''
