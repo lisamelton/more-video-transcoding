@@ -2,7 +2,7 @@
 #
 # av1-transcode.rb
 #
-# Copyright (c) 2023 Don Melton
+# Copyright (c) 2024 Lisa Melton
 #
 
 require 'English'
@@ -18,8 +18,8 @@ module Transcoding
   class Command
     def about
       <<-HERE
-av1-transcode.rb 0.0.02023032901
-Copyright (c) 2023 Don Melton
+av1-transcode.rb 0.0.02024070201
+Copyright (c) 2024 Lisa Melton
       HERE
     end
 

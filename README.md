@@ -4,9 +4,9 @@ More tools to transcode videos.
 
 ## About
 
-Hi, I'm [Don Melton](https://mstdn.social/@donmelton). I created these tools to transcode my collection of Blu-ray Discs and DVDs into a smaller, more portable format while remaining high enough quality to be mistaken for the originals.
+Hi, I'm [Lisa Melton](https://lisamelton.net/). I created these tools to transcode my collection of Blu-ray Discs and DVDs into a smaller, more portable format while remaining high enough quality to be mistaken for the originals.
 
-Unlike my [Other Video Transcoding](https://github.com/donmelton/other_video_transcoding) project, these tools are just separate standalone scripts which must be installed and updated manually.
+Unlike my [Other Video Transcoding](https://github.com/lisamelton/other_video_transcoding) project, these tools are just separate standalone scripts which must be installed and updated manually.
 
 You *do* know how to install a Ruby script manually, right? As well as [`HandBrakeCLI`](https://handbrake.fr/downloads2.php) and [`ffprobe`](https://ffmpeg.org/download.html)? Because both of those tools are required by my scripts.
 
@@ -45,8 +45,6 @@ Video is also automatically cropped and forced subtitles are automatically burne
 
 But there are many customization options including direct access to most of the `HandBrakeCLI` API.
 
-> **WARNING**: *Shortly after HandBrake 1.6.1 was released, the `--two-pass` option in `HandBrakeCLI` was renamed `--multi-pass`.* (Insert "Leeloo Dallas Multipass" GIF here.) *If you use a nightly development build of `HandBrakeCLI` then you'll likely need to replace the text "--two-pass" in `two-pass-transcode.rb` with "--multi-pass" to avoid a runtime failure.*
-
 ### `hevc-transcode.rb`
 
 Designed for 4K HDR content, this script uses the `x265_10bit` software-based encoder with a constant quality ratecontrol system. But it's reeeeeally slow. I mean, really slow. However, it does produce high-quality output. You just have to decide whether it's worth it.
@@ -79,7 +77,7 @@ See? Aaaaand... that's how you use them.
 
 ## Feedback
 
-Please report bugs or ask questions by [creating a new issue](https://github.com/donmelton/more-video-transcoding/issues) on GitHub. I always try to respond quickly but sometimes it may take as long as 24 hours.
+Please report bugs or ask questions by [creating a new issue](https://github.com/lisamelton/more-video-transcoding/issues) on GitHub. I always try to respond quickly but sometimes it may take as long as 24 hours.
 
 ## Acknowledgements
 
@@ -87,4 +85,4 @@ This project would not be possible without my collaborators on the [Video Transc
 
 ## License
 
-More Video Transcoding is copyright [Don Melton](https://mstdn.social/@donmelton) and available under a [MIT license](https://github.com/donmelton/more-video-transcoding/blob/master/LICENSE).
+More Video Transcoding is copyright [Lisa Melton](https://lisamelton.net/) and available under a [MIT license](https://github.com/lisamelton/more-video-transcoding/blob/master/LICENSE).

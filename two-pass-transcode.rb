@@ -2,7 +2,7 @@
 #
 # two-pass-transcode.rb
 #
-# Copyright (c) 2023 Don Melton
+# Copyright (c) 2024 Lisa Melton
 #
 
 require 'English'
@@ -18,8 +18,8 @@ module Transcoding
   class Command
     def about
       <<-HERE
-two-pass-transcode.rb 0.0.02023041201
-Copyright (c) 2023 Don Melton
+two-pass-transcode.rb 0.0.02024070201
+Copyright (c) 2024 Lisa Melton
       HERE
     end
 
@@ -382,7 +382,7 @@ Requires `HandBrakeCLI` and `ffprobe`.
       unless @extra_options.include? 'quality'
         bitrate = [[@bitrate, (bitrate * 0.8).to_i].max, (bitrate * 1.6).to_i].min unless @bitrate.nil?
         options += ['--vb', bitrate.to_s]
-        options += ['--two-pass', '--turbo'] unless @preview
+        options += ['--multi-pass', '--turbo'] unless @preview
       end
 
       unless  @extra_options.include? 'rate'  or
