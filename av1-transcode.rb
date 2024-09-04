@@ -40,6 +40,8 @@ Options:
 -p, --preset NUMBER   apply video encoder preset (default: 8)
 -q, --quality VALUE   set constant quality value (default: 30)
 -b, --bitrate TARGET  use variable bitrate instead of constant quality
+    --deinterlace     reduce interlace artifacts without changing frame rate
+                        (applied automatically for some inputs)
     --add-audio TRACK|LANGUAGE|STRING|all
                       include audio track (default: 1)
                         (can be used multiple times)
@@ -64,6 +66,7 @@ Requires `HandBrakeCLI` and `ffprobe`.
       @preset = '8'
       @quality = '30'
       @bitrate = nil
+      @deinterlace = false
       @audio_selections = [{
         :track => 1,
         :language => nil,
@@ -131,6 +134,10 @@ Requires `HandBrakeCLI` and `ffprobe`.
 
       opts.on '-b', '--bitrate ARG', Integer do |arg|
         @bitrate = [arg, 1].max.to_s
+      end
+
+      opts.on '--deinterlace' do
+        @deinterlace = true
       end
 
       opts.on '--add-audio ARG' do |arg|
@@ -332,12 +339,16 @@ Requires `HandBrakeCLI` and `ffprobe`.
 
       return [] if video.nil?
 
+      deinterlace = @deinterlace
+      deinterlace = true if video.fetch('field_order', 'progressive') != 'progressive'
+
       options = [
         '--encoder', 'svt_av1_10bit',
         '--encoder-preset', @preset
       ]
 
       options += @bitrate.nil? ? ['--quality', @quality] : ['--vb', @bitrate]
+      options += ['-d'] if deinterlace
 
       unless  @extra_options.include? 'rate'  or
               @extra_options.include? 'vfr'   or
