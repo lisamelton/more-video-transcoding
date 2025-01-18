@@ -55,9 +55,6 @@ Audio and subtitle track behavior is the same as with `two-pass-transcode.rb`.
 
 ### `nvenc-hevc-transcode.rb`
 
-> [!WARNING]
-> Recent changes to Nvidia drivers, versions 555.85 and later, have a bug (or feature?) which ignores target bitrates for HEVC output so that only constant quality values are honored. Until this is fixed, don't use the `--bitrate` option with the `nvenc-hevc-transcode.rb` script because the encoder will ignore it and do something undefined.
-
 Also designed for 4K HDR content, this script uses the `nvenc_h265_10bit` Nvidia hardware-based encoder, also with a constant quality ratecontrol system, because you can't always afford to wait on `x265_10bit`. The output will be slightly larger and somewhat lesser in quality but you'll get it a LOT faster. A lot.
 
 But be aware that the `nvenc_h265_10bit` encoder can only produce HDR10-compatible output.
