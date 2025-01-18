@@ -6,7 +6,7 @@ More tools to transcode videos.
 
 Hi, I'm [Lisa Melton](https://lisamelton.net/). I created these tools to transcode my collection of Blu-ray Discs and DVDs into a smaller, more portable format while remaining high enough quality to be mistaken for the originals.
 
-Unlike my [Other Video Transcoding](https://github.com/lisamelton/other_video_transcoding) project, these tools are just separate standalone scripts which must be installed and updated manually.
+Unlike some [Ruby](https://www.ruby-lang.org/)-based projects, these tools are just separate standalone scripts which must be installed and updated manually.
 
 You *do* know how to install a Ruby script manually, right? As well as [`HandBrakeCLI`](https://handbrake.fr/downloads2.php) and [`ffprobe`](https://ffmpeg.org/download.html)? Because both of those tools are required by my scripts.
 
