@@ -2,7 +2,7 @@
 #
 # nvenc-hevc-transcode.rb
 #
-# Copyright (c) 2024 Lisa Melton
+# Copyright (c) 2025 Lisa Melton
 #
 
 require 'English'
@@ -19,7 +19,7 @@ module Transcoding
     def about
       <<-HERE
 nvenc-hevc-transcode.rb 0.0.02024070201
-Copyright (c) 2024 Lisa Melton
+Copyright (c) 2025 Lisa Melton
       HERE
     end
 
