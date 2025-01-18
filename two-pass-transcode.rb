@@ -18,7 +18,7 @@ module Transcoding
   class Command
     def about
       <<-HERE
-two-pass-transcode.rb 0.0.02024070201
+two-pass-transcode.rb 2025.01.18
 Copyright (c) 2025 Lisa Melton
       HERE
     end
