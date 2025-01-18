@@ -2,6 +2,9 @@
 
 More tools to transcode videos.
 
+> [!NOTE]
+> *This project is no longer in active development. Why? Because all the ratecontrol systems and behaviors here have been rolled into the redesigned and rewritten version of `transcode-video.rb` from my [Video Transcoding](https://github.com/lisamelton/video_transcoding) project. Please use that tool instead. For now anyway.*
+
 ## About
 
 Hi, I'm [Lisa Melton](https://lisamelton.net/). I created these tools to transcode my collection of Blu-ray Discs and DVDs into a smaller, more portable format while remaining high enough quality to be mistaken for the originals.
